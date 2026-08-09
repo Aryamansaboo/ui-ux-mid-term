@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Did My Complaint Go? — Hostel Maintenance Transparency</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a href="#top">Home</a>
+  <a href="#phase1">Phase 1 · Empathy</a>
+  <a href="#phase2">Phase 2 · Ideate &amp; Evaluate</a>
+  <a href="#phase3">Phase 3 · Prioritization</a>
+</nav>
+
+<header id="top" class="hero">
+  <p class="eyebrow">UX Research &amp; Information Architecture — Midterm Submission</p>
+  <h1>Where Did My Complaint Go?</h1>
+  <p class="hero-sub">Designing transparency into the hostel maintenance complaint process</p>
+  <p class="byline">Aryaman Saboo · Vijaybhoomi University · August 2026</p>
+
+  <div class="problem-box">
+    <h2>The Broken Experience</h2>
+    <p>Hostel students lack transparency about what happens to their maintenance complaints after submission — making it difficult for them to know whether the complaint has been received, who is handling it, and what progress has been made toward its resolution.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ PHASE 1 ============ -->
+<section id="phase1" class="phase">
+  <div class="phase-label">Phase 1</div>
+  <h2 class="phase-title">Empathy &amp; Definition</h2>
+
+  <article class="block">
+    <h3>1.1 — The Problem Space</h3>
+    <p>I picked this problem because I've filed enough hostel complaints myself to know the feeling of typing a message into a group chat and then just... waiting, with no idea if anyone even saw it. Most hostels don't lack a way to <em>file</em> a complaint — there's a register, a WhatsApp group, or a basic form. What's missing is everything that happens <em>after</em> that: an acknowledgment, a status, an owner, a timeline. The complaint goes into a system I can't see into, and the only way to get information back out is to physically go and ask someone. That gap — not the repair itself — is what I'm trying to fix here.</p>
+  </article>
+
+  <article class="block">
+    <h3>1.2 — Proto-Persona <span class="tag tag-assumed">before research</span></h3>
+    <div class="card proto">
+      <h4>"Rohan" — the assumed frustrated resident</h4>
+      <ul>
+        <li>Cares mainly about repair <strong>speed</strong> — the faster the fix, the happier he is</li>
+        <li>Files a complaint and mostly forgets about it until it's fixed</li>
+        <li>Doesn't care who fixes it or when, as long as it eventually happens</li>
+        <li>Complains rarely — treats it as a one-off inconvenience, not a recurring frustration</li>
+      </ul>
+    </div>
+    <p class="callout-note">This was my assumption going in — I sketched this proto-persona from gut instinct before talking to anyone, mostly based on my own experience. Then I tested it against three real interviews, and it turned out to be wrong on almost every point.</p>
+  </article>
+
+  <article class="block">
+    <h3>1.3 — Talking to Real Residents</h3>
+    <p>I ran three short, semi-structured interviews (15–20 minutes each) with residents from different hostel blocks and years, each of whom had filed a maintenance complaint in the last month. Three people is a small sample, I know — but all three converged on the same complaint almost immediately, which is what convinced me this wasn't a one-off.</p>
+
+    <div class="interview-grid">
+      <div class="interview-card">
+        <h4>Ananya · 2nd Year, B.Des</h4>
+        <p class="meta">Girls Hostel, Block C — AC/fan complaint</p>
+        <p>"I submitted it three days ago, nobody's come. Is anyone even looking at this?"</p>
+      </div>
+      <div class="interview-card">
+        <h4>Karan · 3rd Year, Engineering</h4>
+        <p class="meta">Boys Hostel, Block A — electrical complaint, followed up 3 times</p>
+        <p>"I've messaged the group three times now. I feel like I'm being that annoying guy, but what choice do I have?"</p>
+      </div>
+      <div class="interview-card">
+        <h4>Devansh · 1st Year</h4>
+        <p class="meta">Boys Hostel, Block B — leaking tap, gave up following up</p>
+        <p>"After a week I just stopped asking. I figured either someone would come or they wouldn't."</p>
+      </div>
+    </div>
+
+    <p><strong>What I expected vs. what I heard:</strong></p>
+    <table class="compare-table">
+      <thead><tr><th>Proto-persona assumption</th><th>What real interviews showed</th></tr></thead>
+      <tbody>
+        <tr><td>Cares mainly about repair speed</td><td>Cares more about <em>knowing what's happening</em> than about raw speed — a slow but visible process was described as "fine," a fast but silent one was not</td></tr>
+        <tr><td>Forgets about the complaint after filing it</td><td>Actively and repeatedly checks for updates — WhatsApp, in person, through blockmates</td></tr>
+        <tr><td>Doesn't care who fixes it</td><td>Wants to know <em>someone specific</em> is responsible — accountability reduces anxiety</td></tr>
+        <tr><td>Complains rarely, treats it as one-off</td><td>A bad experience makes residents <strong>under-report</strong> future problems — "I'll just live with it" (Devansh)</td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <article class="block">
+    <h3>1.4 — User Persona <span class="tag tag-real">from real data</span></h3>
+    <div class="persona-card">
+      <div class="persona-avatar" aria-hidden="true">AS</div>
+      <div class="persona-body">
+        <h4>Ananya Sharma</h4>
+        <p class="meta">20 · 2nd Year, B.Des · Girls Hostel Block C, Room 214</p>
+        <p class="persona-quote">"I just want to know someone's actually looking at it."</p>
+        <div class="persona-cols">
+          <div>
+            <h5>Goals</h5>
+            <ul>
+              <li>Get maintenance issues fixed without repeated manual follow-up</li>
+              <li>Know her complaint was received and is being taken seriously</li>
+            </ul>
+          </div>
+          <div>
+            <h5>Frustrations</h5>
+            <ul>
+              <li>Complaints feel like they "disappear into a black hole"</li>
+              <li>Following up repeatedly feels awkward and confrontational</li>
+              <li>No way to tell if a delay is normal or if she's been forgotten</li>
+            </ul>
+          </div>
+        </div>
+        <p class="persona-tech">Comfortable with apps and daily digital tools — the friction isn't technical literacy, it's that the current process (register / WhatsApp group) has no visibility built in at all.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="block">
+    <h3>1.5 — Empathy Map</h3>
+    <p>Built directly from the interview notes above — not from assumptions.</p>
+    <figure class="diagram">
+      <img src="images/empathy-map.png" alt="Empathy map for Ananya, a hostel resident, divided into four quadrants. Says: quotes about not knowing if her complaint was seen and not wanting to seem rude by following up again. Thinks: worries that her complaint was lost or forgotten, and that she has no way to know what is happening behind the scenes. Does: repeatedly checks the hostel WhatsApp group, walks to the warden's office in person, asks blockmates about their complaints, and re-submits after a week of silence. Feels: anxious, ignored like the complaint disappeared into a black hole, mildly resentful toward hostel admin, and reluctant to bother staff again.">
+      <figcaption>Empathy Map — Ananya, hostel resident. Synthesized from 3 resident interviews.</figcaption>
+    </figure>
+  </article>
+
+  <article class="block">
+    <h3>1.6 — User Journey Map</h3>
+    <p><strong>Scenario:</strong> Ananya's ceiling fan stops working during peak summer. She files a complaint and needs it fixed — and wants to know what's happening while she waits.</p>
+    <figure class="diagram">
+      <img src="images/journey-map.png" alt="User journey map plotting Ananya's emotional state across seven stages of reporting a broken fan: Notices Problem (slightly negative), Submits Complaint (neutral, hopeful), Day 1 Waits (slightly negative), Day 3 Follows Up (lowest point, strongly negative — 'is anyone even looking at this'), Day 5 Escalates in person (still negative but improving), Day 7 Fan Fixed (positive relief, but no acknowledgment it was scheduled), and Reflects afterward (back to neutral, with a resolve to under-report future issues). The lowest dip on Day 3 is called out as the core pain point: zero visibility between submitting a complaint and it being resolved, forcing manual follow-up.">
+      <figcaption>User Journey Map — "My fan just stopped working, mid-summer." Emotion line from Frustrated (-2) to Delighted (+2) across a 7-day resolution window.</figcaption>
+    </figure>
+  </article>
+
+  <article class="block">
+    <h3>1.7 — The Core Pain Point</h3>
+    <div class="pain-point">
+      <p>The lowest point on the emotion line is <strong>Day 3 — Follow Up</strong>, when a second message gets no clear answer either way. That dip isn't really about the broken fan. It's about the silence.</p>
+      <p class="pain-statement">Between submitting a complaint and it being resolved, hostel residents have <strong>zero visibility</strong> — no acknowledgment, no status, no named owner, no timeline. That absence of information forces residents into repeated, awkward manual follow-ups, and over time, teaches them not to bother reporting at all.</p>
+    </div>
+  </article>
+
+  <article class="block">
+    <h3>1.8 — User Stories</h3>
+    <div class="story-grid">
+      <div class="story-card">
+        <p><strong>As a</strong> hostel resident, <strong>I want</strong> an instant acknowledgment when I submit a complaint, <strong>so that</strong> I know it actually reached maintenance staff and wasn't lost.</p>
+      </div>
+      <div class="story-card">
+        <p><strong>As a</strong> hostel resident, <strong>I want</strong> to see my complaint's current status (Received / Assigned / In Progress / Resolved), <strong>so that</strong> I don't have to track down the warden in person just to ask.</p>
+      </div>
+      <div class="story-card">
+        <p><strong>As a</strong> hostel resident, <strong>I want</strong> to know who is handling my complaint and roughly when, <strong>so that</strong> I can plan around the disruption instead of guessing.</p>
+      </div>
+      <div class="story-card">
+        <p><strong>As a</strong> hostel resident, <strong>I want</strong> to be notified the moment my complaint's status changes, <strong>so that</strong> I don't have to keep checking manually to find out.</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ PHASE 2 ============ -->
+<section id="phase2" class="phase">
+  <div class="phase-label">Phase 2</div>
+  <h2 class="phase-title">Ideate &amp; Evaluate</h2>
+
+  <article class="block">
+    <h3>2.1 — From Stories to Features</h3>
+    <p>The four user stories above were expanded into a broader list of everything the product might plausibly need — features and content items, not yet organized into any structure.</p>
+  </article>
+
+  <article class="block">
+    <h3>2.2 — Feature &amp; Content Inventory (20 items)</h3>
+    <ol class="feature-list">
+      <li>Submit New Complaint</li>
+      <li>Select Complaint Category (Electrical / Plumbing / Carpentry / Internet / Cleaning / Other)</li>
+      <li>Attach Photo / Video Evidence</li>
+      <li>Auto-fill Room &amp; Block Number</li>
+      <li>Instant Submission Confirmation</li>
+      <li>Unique Complaint ID / Tracking Number</li>
+      <li>Live Status Tracker (Received → Assigned → In Progress → Resolved)</li>
+      <li>Assigned Technician Name &amp; Contact</li>
+      <li>Estimated Resolution Time</li>
+      <li>Push / SMS Notification on Status Change</li>
+      <li>In-App Comment Thread with Maintenance Staff</li>
+      <li>My Complaint History (Past &amp; Active)</li>
+      <li>Escalate a Delayed Complaint</li>
+      <li>Rate &amp; Give Feedback After Resolution</li>
+      <li>Mark as Urgent / Priority Flag</li>
+      <li>Reopen a "Resolved" Complaint</li>
+      <li>Hostel-wide Maintenance Announcements</li>
+      <li>FAQ / Self-Help for Common Issues</li>
+      <li>Complaint Analytics (e.g. average resolution time for my hostel)</li>
+      <li>"Others Reported This Too" Alert for Similar Nearby Complaints</li>
+    </ol>
+  </article>
+
+  <article class="block">
+    <h3>2.3 — Card Sort</h3>
+    <p><strong>Method:</strong> Hybrid card sort — 12 hostel residents, physical index cards for all 20 items above, and four starter categories (<em>Complaints, Track &amp; Status, History, Help</em>) that participants were free to rename, merge, split, or ignore in favor of their own groupings.</p>
+
+    <h4>Patterns I found</h4>
+    <ul class="pattern-list">
+      <li><strong>Strong agreement (10+/12):</strong> Items 1–6 (submit, category, photo, room auto-fill, confirmation, ID) consistently grouped under a "New / Submit a Complaint" category.</li>
+      <li><strong>Strong agreement (11/12):</strong> Items 7–11 (status tracker, technician, ETA, notifications, comment thread) were grouped together — and most participants independently created a category literally called <em>"Track"</em> or <em>"Status."</em> Nobody nested these inside a general "history" or "account" bucket.</li>
+      <li><strong>Moderate agreement (8/12):</strong> Items 12, 13, 15, 16 (history, escalate, urgent flag, reopen) clustered under "My Complaints," though 4 participants placed "Escalate" with Track instead.</li>
+      <li><strong>Split decision:</strong> Item 14 (Rate &amp; Feedback) — 6 participants put it with Track/Resolved, 6 put it with History. No majority pattern.</li>
+      <li><strong>Weak/inconsistent agreement:</strong> Items 17, 19, 20 (announcements, analytics, "others reported this too") were placed inconsistently — several participants said these felt unnecessary or unclear, and two invented a new bucket, "Hostel Updates," for them.</li>
+      <li><strong>Strong agreement (10/12):</strong> Item 18 (FAQ) consistently grouped under "Help."</li>
+    </ul>
+
+    <div class="callout-insight">
+      <strong>Key insight:</strong> Residents want <em>Track / Status</em> to be its own first-class, top-level destination — not something buried inside a general history or account section. This directly matches the core pain point from Phase 1: the need for status to be visible, not archived.
+    </div>
+  </article>
+
+  <article class="block">
+    <h3>2.4 — V1 Information Architecture</h3>
+    <p>Built directly from the card sort patterns above — five top-level categories, with "Track My Complaints" kept as its own first-class destination rather than folded into history.</p>
+    <figure class="diagram">
+      <img src="images/ia-tree.png" alt="V1 information architecture tree for the hostel complaint app. Root: Home. Five top-level branches: Submit a Complaint (Select Category, Attach Photo/Video, Room/Block auto-filled, Mark Urgent), Track My Complaints — highlighted with a red outline and marked with an asterisk as a card-sort insight — (Live Status Tracker, Assigned Technician, Estimated Time, Comment Thread), My History (Past Complaints, Escalate Delayed, Reopen Resolved, Rate and Feedback), Hostel Updates (Maintenance Announcements, Similar Complaints Nearby), and Help (FAQ, Complaint Analytics).">
+      <figcaption>V1 IA tree, built from a 12-resident hybrid card sort.</figcaption>
+    </figure>
+  </article>
+
+  <article class="block">
+    <h3>2.5 — Tree Test</h3>
+    <p><strong>Method:</strong> I tested the V1 tree above with 6 hostel residents (none of whom took part in the card sort), giving each a task and asking them to say, out loud, which path they'd follow to complete it. Six is on the smaller side for a tree test, but both failures below showed up almost immediately and repeated across multiple participants, which is usually the sign you've found a real structural problem rather than noise.</p>
+
+    <h4>Scenario 1</h4>
+    <p class="scenario-text">"Your ceiling fan stopped working. You submitted the complaint two days ago. You want to find out who's fixing it and when it'll be done. Where would you look?"</p>
+    <p><strong>Target destination:</strong> Track My Complaints → Live Status Tracker / Assigned Technician</p>
+    <p><strong>Result:</strong> 4 of 6 succeeded directly. 2 of 6 first clicked into <em>My History</em>, expecting their active complaint to live there, before backtracking after ~10–15 seconds.</p>
+
+    <h4>Scenario 2</h4>
+    <p class="scenario-text">"You want to check if anyone else in your block also complained about the water heater. Where would you look?"</p>
+    <p><strong>Target destination:</strong> Hostel Updates → Similar Complaints Nearby</p>
+    <p><strong>Result:</strong> Only 1 of 6 found it there. 3 of 6 looked inside Track My Complaints; 2 of 6 looked inside My History. Nobody thought to check "Hostel Updates" first.</p>
+
+    <table class="compare-table">
+      <thead><tr><th>Where users failed</th><th>Why</th><th>How I fixed the IA</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Scenario 1 — 2/6 looked in "My History" instead of "Track My Complaints"</td>
+          <td>Residents don't mentally separate "my active complaint" from "my complaint history" — to them it's one list of complaints in different states, not two destinations</td>
+          <td>Merged <em>Track My Complaints</em> and <em>My History</em> into one top-level <strong>"My Complaints"</strong> section, split internally into Active / Past tabs</td>
+        </tr>
+        <tr>
+          <td>Scenario 2 — 5/6 failed to find "Similar Complaints Nearby" under Hostel Updates</td>
+          <td>Users associate "similar complaints" with the complaint they're already tracking, not with general hostel-wide announcements — it was filed under the wrong mental model entirely</td>
+          <td>Moved <em>Similar Complaints</em> out of Hostel Updates and into the individual complaint's status screen, as related, contextual info</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <article class="block">
+    <h3>2.6 — V2 Information Architecture (revised)</h3>
+    <div class="ia-tree ia-tree-v2">
+      <ul>
+        <li>Home
+          <ul>
+            <li>Submit a Complaint
+              <ul>
+                <li>Select Category</li>
+                <li>Attach Photo / Video</li>
+                <li>Room / Block (auto-filled)</li>
+                <li>Mark Urgent</li>
+              </ul>
+            </li>
+            <li class="changed">My Complaints <span class="tag tag-changed">merged</span>
+              <ul>
+                <li>Active
+                  <ul>
+                    <li>Live Status Tracker</li>
+                    <li>Assigned Technician</li>
+                    <li>Estimated Resolution Time</li>
+                    <li>Comment Thread</li>
+                    <li class="changed">Similar Complaints Nearby <span class="tag tag-changed">moved here</span></li>
+                    <li>Escalate a Delayed Complaint</li>
+                  </ul>
+                </li>
+                <li>Past
+                  <ul>
+                    <li>Resolved Complaints</li>
+                    <li>Reopen a Resolved Complaint</li>
+                    <li>Rate &amp; Feedback</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Hostel Updates
+              <ul>
+                <li>Maintenance Announcements</li>
+              </ul>
+            </li>
+            <li>Help
+              <ul>
+                <li>FAQ</li>
+                <li>Complaint Analytics</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ PHASE 3 ============ -->
+<section id="phase3" class="phase">
+  <div class="phase-label">Phase 3</div>
+  <h2 class="phase-title">Prioritization</h2>
+
+  <article class="block">
+    <h3>3.1 — MoSCoW: What Actually Ships in v1</h3>
+    <p>Budget is tight, and the brief allows exactly four Must-Haves. Everything is sorted against one test: <em>does this directly close the visibility gap from the core pain point, or is it secondary?</em></p>
+
+    <div class="moscow-grid">
+      <div class="moscow-col must">
+        <h4>Must-Have <span class="count">4 / 4</span></h4>
+        <ul>
+          <li>Submit a Complaint (category + photo)<span class="why">The front door — nothing else works without it</span></li>
+          <li>Live Status Tracker<span class="why">Directly solves the core pain point</span></li>
+          <li>Instant Confirmation + Unique Complaint ID<span class="why">The first trust signal — "did it even go through?"</span></li>
+          <li>Push Notification on Status Change<span class="why">Closes the loop without forcing manual checking</span></li>
+        </ul>
+      </div>
+      <div class="moscow-col should">
+        <h4>Should-Have</h4>
+        <ul>
+          <li>My Complaints History (Past)</li>
+          <li>In-App Comment Thread with Staff</li>
+          <li>Escalate a Delayed Complaint</li>
+          <li>Assigned Technician Name &amp; Contact</li>
+        </ul>
+      </div>
+      <div class="moscow-col could">
+        <h4>Could-Have</h4>
+        <ul>
+          <li>Rate &amp; Feedback</li>
+          <li>Reopen a Resolved Complaint</li>
+          <li>Complaint Analytics</li>
+          <li>Hostel-wide Announcements</li>
+          <li>Mark as Urgent / Priority Flag</li>
+        </ul>
+      </div>
+      <div class="moscow-col wont">
+        <h4>Won't-Have (v1)</h4>
+        <ul>
+          <li>Similar Complaints Nearby Alert</li>
+          <li>FAQ / Self-Help</li>
+          <li>Admin / warden dashboard</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="block">
+    <h3>3.2 — The Hardest Debate</h3>
+    <p>Two features both directly attack the core pain point, and both made a real case for the last Must-Have slot: <strong>Push Notification on Status Change</strong> and <strong>Assigned Technician Name &amp; Contact</strong>. I genuinely went back and forth on this one — so instead of picking by gut feeling, I ran them through a DFV Matrix.</p>
+  </article>
+
+  <article class="block">
+    <h3>3.3 — DFV Matrix</h3>
+    <table class="dfv-table">
+      <thead>
+        <tr><th>Feature</th><th>Desirability</th><th>Feasibility</th><th>Viability</th><th>Total</th></tr>
+      </thead>
+      <tbody>
+        <tr class="winner">
+          <td class="feature-name">Push Notification on Status Change</td>
+          <td><span class="score">5</span><span class="reason">Every interviewee independently said some version of "just tell me, don't make me check"</span></td>
+          <td><span class="score">4</span><span class="reason">Standard push/SMS pattern, well understood, moderate integration effort</span></td>
+          <td><span class="score">4</span><span class="reason">Cuts down admin foot-traffic and repeat questions — real staff-time savings, low ongoing cost</span></td>
+          <td class="total">13<span class="of">/15</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Assigned Technician Name &amp; Contact</td>
+          <td><span class="score">4</span><span class="reason">Valued, but secondary in interviews — "I mostly just want to know it's moving"</span></td>
+          <td><span class="score">3</span><span class="reason">Depends on staff-assignment data being entered accurately every time — fragile at MVP stage</span></td>
+          <td><span class="score">3</span><span class="reason">Raises a privacy question (exposing staff contact info to students) that needs a policy decision first</span></td>
+          <td class="total">10<span class="of">/15</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="dfv-verdict"><strong>Push Notification on Status Change</strong> wins, 13 to 10, and takes the fourth Must-Have slot. Assigned Technician stays a strong Should-Have for v1.1, once the staff-assignment data pipeline and the privacy question are sorted out.</p>
+  </article>
+
+  <article class="block">
+    <h3>3.4 — The MVP</h3>
+    <div class="mvp-summary">
+      <p>What actually ships in v1: a resident can <strong>submit</strong> a complaint with a category and photo, get an <strong>instant confirmation</strong> with a tracking ID, watch a <strong>live status tracker</strong> move from Received to Resolved, and get a <strong>push notification</strong> the moment anything changes — without ever having to walk to the warden's office to ask "any update?"</p>
+      <p>None of this makes repairs happen faster. It just makes the waiting bearable, which — based on everything in Phase 1 — is what was actually broken.</p>
+    </div>
+  </article>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>GitHub Pages: <a href="https://aryamansaboo.github.io/ui-ux-mid-term/" target="_blank">aryamansaboo.github.io/ui-ux-mid-term</a></p>
+  <p class="methodology-note">Put together for my UX Research &amp; Information Architecture midterm. Diagrams sketched by hand in Excalidraw; interviews, card sort, and tree test were run with real hostel residents.</p>
+</footer>
+
+</body>
+</html>
